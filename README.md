@@ -44,6 +44,7 @@ var num2 = '3';
 (num !== num2);
 // true
 ```
+[Comparison Operator Docs](git@github.com:calebatwood/Week2_Wednesday.git)
 
 ###Logical Operators
 Comparison operators usually return single values of `true` or `false`. Logical operators allow you to compare the results of multiple comparison operators.
@@ -68,6 +69,7 @@ var num = 6
 !(string.length == num);
 // ??????
 ```
+[Logical Operator Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical_operators)
 
 ###Conditional Statements
 
@@ -98,6 +100,7 @@ else {
 Often times, there are more than one outcome when evaluating a condition. The `if..else` statement provides an alternate path if the condition isn't met. If it resolves to 'true', the first block of code will be executed. If the condition resolves to false, the second block of code is run instead.
 
 ###Switch Statements
+
 `Switch` statements are used to execute code when a variable matches a particular value. A `switch` statement starts with a variable called the `switch value`. Each `case` indicates a possible value and the code that should be run if the the 'switch value' matches the `case value`.
 <br>
 <br>
@@ -122,12 +125,17 @@ switch(level) {
 
 console.log(message);
 ```
+
 Switches are useful if you're looking for a particular value. Though you could use multiple if statements, they will all be evaluated even if a match is found, making your code slower than if you had used a `switch` instead.
 
+[Switch Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
+
 ##Loops
+
 Loops also check for conditions. If a `loop` returns `true`, the block of code will run. The condition will then be checked again and if it still returns `true`, the block of code will run again. The `loop` will repeat itself until the condition returns `false`.
 
 ###For Loops
+
 The 'for' loop is the most common loop you'll see in JavaScript, and is used if you need the code to run a specific amount of times. The condition is usually a `counter` that specifies how many times the loop should run.
 
 ```javascript
@@ -149,5 +157,19 @@ for(i=0; i<animals.length; i++) {      //the first position in an array is 0 so 
 ```
 
 ###While Loops
+The 'while' loop will execute a code statement as long as the condition it's testing evaluates to `true`.
+```javascript
+// Objective: Figure out how many times 'num' will need to be added to itself
+// before it reaches 1000.
 
-###Do While Loops
+var counter = 0;
+var num = 2;
+
+while (num < 1000) {  // condition
+  num += num;         // statement
+  counter++;
+}
+
+console.log(counter); // number of summations required to reach 1000 beginning at 2.
+
+```
