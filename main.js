@@ -8,7 +8,7 @@ var livingRoom = ['couch', 'lamp', 'rug', 'shelf'];
 //    HINT: Google 'remainder operator'
 var numArray = [2, 17, 9, 24, 8];
 
-// Ro Sham Bo
+// RO SHAM BO!
 // We're going to create a paper, rock, scissors game that prompts you for your choice and allows the computer to
 // randomly choose. You will use an alert to define the winner.
 // 3. Use a variable called "human" to prompt the user to type their choice.
@@ -40,3 +40,33 @@ var numArray = [2, 17, 9, 24, 8];
 // 11. Use the game you made above and rework it using a switch statement.
 // 12. What happens if your user enters something other than "rock", "paper", or "scissors?". Change your default case
 //     to print a snarky message to the console if the input doesn't match any of the options.
+
+
+// 13. Using a loop, log numbers 22-33 in the console.
+
+// 14. Using a similar loop, log numbers 75 to 100, only in increments of five.
+
+// 15. Write a while loop that logs "This is how a professional loops." to the console 5 times.
+//     Use this as an example:
+//        var counter = 0;
+//        var num = 2;
+
+//        while (num < 1000) {
+//        num += num;
+//        counter++;
+//        }
+
+//        console.log(counter);
+
+// 15. Separately, use both a for loop and while loop to do the same thing.
+//     Print out the sentence "At home, I have _____ cats." Use the number from your counter to fill in the number.
+//     The numbers should range from 10 to 100, in increments of 25.
+
+// HEDS ER TALES?
+// 16. Use the following variable for your coin flip action:
+       var coin = Math.floor(Math.random() * 2);
+//     We're using Math.random again, along with Math.floor.
+//     Remember, Math.random gives you a random number between 0 and 1.
+//     Calling Math.floor on that number will truncate the decimal, and give you a
+//     random number within the bounds of your array. (In this case, our array will only contain two items.)
+// 17. Use a while loop to keep flipping the coin until you get tails.
