@@ -131,7 +131,7 @@ Switches are useful if you're looking for a particular value. Though you could u
 [Switch Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
 
 ##Loops
-
+![](https://media.giphy.com/media/C2gLFCJVEwXyU/giphy.gif)
 Loops also check for conditions. If a `loop` returns `true`, the block of code will run. The condition will then be checked again and if it still returns `true`, the block of code will run again. The `loop` will repeat itself until the condition returns `false`.
 
 ###For Loops
