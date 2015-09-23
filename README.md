@@ -139,7 +139,7 @@ Loops also check for conditions. If a `loop` returns `true`, the block of code w
 The 'for' loop is the most common loop you'll see in JavaScript, and is used if you need the code to run a specific amount of times. The condition is usually a `counter` that specifies how many times the loop should run.
 
 ```javascript
-for(i=0;i<10,i++) {
+for(i=0; i<10; i++) {
   console.log(i);
 }
 //What will the output be to the console??
