@@ -173,3 +173,11 @@ while (num < 1000) {  // condition
 console.log(counter); // number of summations required to reach 1000 beginning at 2.
 
 ```
+
+###Infinite Loops
+```javascript
+counter = 5;
+while (counter < 10) {
+  console.log("Can't stop looping...");
+}
+```
