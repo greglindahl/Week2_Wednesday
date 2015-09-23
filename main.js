@@ -89,8 +89,15 @@ var primeArray = [];
 //     random number within the bounds of your array. (In this case, our array will only contain two items.)
 // 22. Use a while loop to keep flipping the coin until you get tails.
 
+// 23. FIZZ BUZZ
+// Write a program that uses console.log to print each number up to 100, with a couple exceptions...
+// If the number is divisible by 3, print "Fizz" instead of the number.
+// If the number is divisible by 5, print "Buzz" instead of the number.
+// If the number is divisible by both 3 and 5, print "FizzBuzz" instead of the number.
+
+
 // CHESS BOARD
-// 23. Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines.
+// 24. Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines.
 // At each position of the grid there is either a space or a “#” character. The characters should form a chess board.
 
 //Passing this string to console.log should show something like this:
