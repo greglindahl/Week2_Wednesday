@@ -19,16 +19,19 @@ var livingRoom = ['couch', 'lamp', 'rug', 'shelf'];
 
 //        console.log(counter);
 
-// 5. Separately, use both a for loop and while loop to do the same thing.
+// 5. Write a conditional statement to find the largest of the numbers in the array provided.
+var largestNum = [-5, -2, -6, 0, -1]
+
+// 6. Separately, use both a for loop and while loop to do the same thing.
 //     Print out the sentence "At home, I have _____ cats." Use the number from your counter to fill in the number.
 //     The numbers should range from 10 to 100, in increments of 25.
 
-// 6. Given the following Array, console log 'Even' if the number is even, 'Even and greater than 10' if the
+// 7. Given the following Array, console log 'Even' if the number is even, 'Even and greater than 10' if the
 //    number is even and greater than 10, and 'Odd' if the number is odd.
 //    HINT: Google 'remainder operator'
 var numArray = [2, 17, 9, 24, 8];
 
-// 7. Given the following Array, create variable primeArray with the value [2, 7, 17, 29, 41, 53, 67, 79, 97]
+// 8. Given the following Array, create variable primeArray with the value [2, 7, 17, 29, 41, 53, 67, 79, 97]
 var primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97,];
 var primeArray = [];
 
@@ -113,3 +116,25 @@ var primeArray = [];
 
 // When you have a program that generates this pattern, define a variable size = 8 and change the program
 // sso that it works for any size, outputting a grid of the given width and height.
+
+
+// THAR BE DACHSHUNDS
+// We're going to slay some badass dachshunds.
+// 25. Start by using the following variables:
+var slaying = true;
+var youHit = Math.floor(Math.random() * 2);
+var damageThisRound = Math.floor(Math.random()*5 + 1);
+var totalDamage = 0;
+
+// 26. Create a while loop that runs as long as "slaying" is equal to true. For now, set "slaying" to false
+//     inside of the body of the loop so we don't break stuff with an infinite loop.
+// 27. Inside of your while loop, create a conditional statement. If "youHit" is 1 (which is true),
+//     log to the console a congratulatory message about injuring the poor dog.
+//     If "youHit" is 0 (which is false), log to the console a message about that bastard beating you.
+//     The "slaying" variable should be set to false here to end the loop.
+// 28. Inside of the first branch of our conditional statement, after the console.log statement,
+//     set "totalDamage" to totalDamage plus damageThisRound.
+// 29. Below that, begin a new conditional statement. If you hit the dachshund 4 times, you killed him! Log a success message to the console.
+//     If the totalDamage is less than 4, set the youHit variable to the same expression we used at the top.
+//     This will begin the loop again.
+// 30. Play until you win!
