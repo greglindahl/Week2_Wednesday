@@ -1,11 +1,25 @@
 // JavaScript Looping Exercise
 
 // 1. Output each item in the following Array to your console:
+console.log('Question 1.');
 var livingRoom = ['couch', 'lamp', 'rug', 'shelf'];
+for(i = 3; i<livingRoom.length; i++) {
+	console.log(livingRoom);
+}
 
 // 2. Using a loop, log numbers 22-33 in the console.
+var loopNumbers = 21;
+while (loopNumbers < 33) {
+	loopNumbers++;
+	console.log(loopNumbers);
+}
 
 // 3. Using a similar loop, log numbers 75 to 100, only in increments of five.
+var loopNumbers2 = 70;
+while (loopNumbers2 < 100) {
+	loopNumbers2 = loopNumbers2 + 5;
+	console.log(loopNumbers2);
+}
 
 // 4. Write a while loop that logs "This is how a professional loops." to the console 5 times.
 //     Use this as an example:
@@ -18,22 +32,63 @@ var livingRoom = ['couch', 'lamp', 'rug', 'shelf'];
 //        }
 
 //        console.log(counter);
+var message = "This is how a professional loops.";
+var loops = 0;
+
+while (loops < 5) {
+	loops++;
+	console.log(message);
+}
 
 // 5. Write a conditional statement to find the largest of the numbers in the array provided.
 var largestNum = [-5, -2, -6, 0, -1]
+var largest = 0;
+
+for (var i = 0; i < largestNum.length; i++) {
+	  if (largestNum[i] > largest) {
+	    largest = largestNum[i];
+	}
+}
+console.log(largest);
+
 
 // 6. Separately, use both a for loop and while loop to do the same thing.
 //     Print out the sentence "At home, I have _____ cats." Use the number from your counter to fill in the number.
 //     The numbers should range from 10 to 100, in increments of 25.
+var cats = 10;
+while (cats < 100) {
+	cats = cats + 25;
+	console.log("At home, I have " + cats + " cats.");
+}
+
+var catArray = [10, 25, 35, 39, 40];
+for (i = 0; i < catArray.length; i++) {
+	console.log("At home, I have " + catArray[i] + " cats.");
+}
+
 
 // 7. Given the following Array, console log 'Even' if the number is even, 'Even and greater than 10' if the
 //    number is even and greater than 10, and 'Odd' if the number is odd.
 //    HINT: Google 'remainder operator'
 var numArray = [2, 17, 9, 24, 8];
+for (i = 0; i < numArray.length; i++) {
+	if (numArray[i] % 2) {
+		console.log("Even");
+	} else if (numArray[i] > 10) {
+		console.log("Odd");
+	}
+}
 
 // 8. Given the following Array, create variable primeArray with the value [2, 7, 17, 29, 41, 53, 67, 79, 97]
+console.log("Question 8.")
 var primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97,];
 var primeArray = [];
+for (i = 0; i < primes.length; i+=3) {
+   primeArray.push(primes[i]);
+ }
+console.log(primeArray);
+
+
 
 // 9. Prompt a user to pick either a number or a word. Create a script that alerts the user whether they chose a number or a word.
 // Hint: Google 'typeof'
