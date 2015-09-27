@@ -301,28 +301,37 @@ console.log(board);
 // THAR BE DACHSHUNDS
 // We're going to slay some badass dachshunds.
 // 25. Start by using the following variables:
-
-// 26. Create a while loop that runs as long as "slaying" is equal to true. For now, set "slaying" to false
-//     inside of the body of the loop so we don't break stuff with an infinite loop.
 var slaying = true;
 var youHit = Math.floor(Math.random() * 2);
 var damageThisRound = Math.floor(Math.random()*5 + 1);
 var totalDamage = 0;
 
+// 26. Create a while loop that runs as long as "slaying" is equal to true. For now, set "slaying" to false
+//     inside of the body of the loop so we don't break stuff with an infinite loop.
+// 27. Inside of your while loop, create a conditional statement. If "youHit" is 1 (which is true),
+//     log to the console a congratulatory message about injuring the poor dog.
+//     If "youHit" is 0 (which is false), log to the console a message about that bastard beating you.
+//     The "slaying" variable should be set to false here to end the loop.
+// 28. Inside of the first branch of our conditional statement, after the console.log statement,
+//     set "totalDamage" to totalDamage plus damageThisRound.
+// 29. Below that, begin a new conditional statement. If you hit the dachshund 4 times, you killed him! Log a success message to the console.
+//     If the totalDamage is less than 4, set the youHit variable to the same expression we used at the top.
+//     This will begin the loop again.
+// 30. Play until you win!
 
-while (slaying = true) {
+while (slaying) {
 	slaying = false;
-	if (youHit == 1) {
+	if (youHit === 1) {
 		youHit = Math.floor(Math.random() * 2);
 		console.log('Great! You hit the dog');
 		totalDamage = totalDamage + damageThisRound;
-		if (totalDamage == 4) {
+		if (totalDamage === 4) {  
 			console.log('You killed the Dog!');
-			slaying = true;
+			slaying = true; 
 		} else if (totalDamage < 4) {
 			youHit = Math.floor(Math.random() * 2);
 		}
-	} else if (youHit == 0) {
+	} else if (youHit === 0) {
 		youHit = Math.floor(Math.random() * 2);
 		console.log('Ugh, the dog is kicking your butt!');
 	}
