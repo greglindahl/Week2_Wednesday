@@ -117,66 +117,6 @@ while (loops < 7) {
 // We're going to create a paper, rock, scissors game that prompts you for your choice and allows the computer to
 // randomly choose. You will use an alert to define the winner.
 
-var human = prompt('rock, paper, scissors! Please enter your choice.');
-var choices = ['rock', 'paper', 'scissors'];
-var computer = Math.floor(Math.random() * 100);
-console.log(computer);
-if (computer <= 0 || computer <= 33) {
-	var computer = 'rock';
-	console.log(computer);
-} else if (computer <= 34 || computer <= 66) {
-	var computer = 'paper';
-	console.log(computer);
-} else if (computer <= 67 || computer <= 100) {
-	var computer = 'scissors';
-	console.log(computer);
-}
-
-if (human === 'rock') {
-	if (computer === 'paper') {
-		console.log('paper wins');
-	} else if (computer === 'scissors') {
-		console.log('rock wins');
-	} else if (human === 'paper') {
-		if (computer === 'rock') {
-			cosole.log('paper wins');
-		} else if (computer === 'scissors') {
-			console.log('scissors win');
-		} else if (human === 'scissors') {
-			if (computer === 'rock') {
-				console.log('rock wins');
-			} else if (computer === 'paper') {
-				console.log('scissors wins');
-			}
-		}
-	}
-}
-
-// if (human != 'rock' || human != 'paper' || human != 'scissors') {
-// 	alert('Please enter rock paper or scissors');
-// 	var human = prompt('rock, paper, scissors! Please enter your choice.');
-// } else if (human === 'rock') {
-// 	if (computer === 'paper') {
-// 		console.log('paper wins');
-// 	} else if (computer === 'scissors') {
-// 		console.log('rock wins');
-// 	} else if (human === 'paper') {
-// 		if (computer === 'rock') {
-// 			cosole.log('paper wins');
-// 		} else if (computer === 'scissors') {
-// 			console.log('scissors win');
-// 		} else if (human === 'scissors') {
-// 			if (computer === 'rock') {
-// 				console.log('rock wins');
-// 			} else if (computer === 'paper') {
-// 				console.log('scissors wins');
-// 			}
-// 		}
-// 	}
-// }
-
-
-
 // 11. Use a variable called "human" to prompt the user to type their choice.
 // var human = prompt('Rock, Paper, Scissors! Please enter your choice.');
 
@@ -213,6 +153,88 @@ if (human === 'rock') {
 // 19. Use the game you made above and rework it using a switch statement.
 // 20. What happens if your user enters something other than "rock", "paper", or "scissors?". Change your default case
 //     to print a snarky message to the console if the input doesn't match any of the options.
+
+var human = prompt('rock, paper, scissors! Please enter your choice.');
+var choices = ['rock', 'paper', 'scissors'];
+var computer = Math.floor(Math.random() * 100);
+console.log(computer);
+if (computer <= 0 || computer <= 33) {
+	var computer = 'rock';
+	console.log(computer);
+} else if (computer <= 34 || computer <= 66) {
+	var computer = 'paper';
+	console.log(computer);
+} else if (computer <= 67 || computer <= 100) {
+	var computer = 'scissors';
+	console.log(computer);
+}
+
+if (human === 'rock') {
+	if (computer === 'paper') {
+		console.log('paper wins');
+	} else if (computer === 'scissors') {
+		console.log('rock wins');
+	} else if (human === 'paper') {
+		if (computer === 'rock') {
+			cosole.log('paper wins');
+		} else if (computer === 'scissors') {
+			console.log('scissors win');
+		} else if (human === 'scissors') {
+			if (computer === 'rock') {
+				console.log('rock wins');
+			} else if (computer === 'paper') {
+				console.log('scissors wins');
+			}
+		}
+	}
+}
+
+function versusRock(human) {
+	switch(human) {
+		case 'paper':
+			return 'paper wins';
+		case 'scissors':
+			return 'rock wins';
+		default:
+			return 'tie';
+	}
+}
+
+function versusPaper(human) {
+	switch(human) {
+		case 'rock':
+			return 'paper wins';
+		case 'scissors':
+			return 'scissors wins';
+		default:
+			return 'tie';
+	}
+}
+
+function versusScissors(human) {
+	switch(human) {
+		case 'rock':
+			return 'rock wins';
+		case 'paper':
+			return 'scissors wins';
+		default:
+			return 'tie';
+	}
+}
+
+switch(human) {
+	case 'rock':
+		console.log(versusRock(computer));
+		break;
+	case 'paper':
+		console.log(versusPaper(computer));
+		break;
+	case 'scissors':
+		console.log(versusScissors(computer));
+		break;
+	default:
+		alert('rock, paper or scissors required');
+}
 
 
 // HEDS ER TALES?
@@ -336,14 +358,3 @@ while (slaying) {
 		console.log('Ugh, the dog is kicking your butt!');
 	}
 }
-
-// 27. Inside of your while loop, create a conditional statement. If "youHit" is 1 (which is true),
-//     log to the console a congratulatory message about injuring the poor dog.
-//     If "youHit" is 0 (which is false), log to the console a message about that bastard beating you.
-//     The "slaying" variable should be set to false here to end the loop.
-// 28. Inside of the first branch of our conditional statement, after the console.log statement,
-//     set "totalDamage" to totalDamage plus damageThisRound.
-// 29. Below that, begin a new conditional statement. If you hit the dachshund 4 times, you killed him! Log a success message to the console.
-//     If the totalDamage is less than 4, set the youHit variable to the same expression we used at the top.
-//     This will begin the loop again.
-// 30. Play until you win!
