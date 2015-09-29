@@ -184,6 +184,8 @@ if (human === 'rock') {
 				console.log('rock wins');
 			} else if (computer === 'paper') {
 				console.log('scissors wins');
+			} else if (computer === human) {
+				console.log("It's a tie!");
 			}
 		}
 	}
@@ -308,13 +310,13 @@ var size = prompt("Enter a number from 1 - 100");
 var board = '';
 
 for (var y = 0; y < size; y++) { 
-for (var x = 0; x < size; x++) {
-if ((x + y) % 2 == 0) 
-board += ' ';
-else
-board += '#';
-}
-board += '\n';
+	for (var x = 0; x < size; x++) {
+		if ((x + y) % 2 == 0) 
+			board += ' ';
+		else
+			board += '#';
+	}
+	board += '\n';
 }
 
 console.log(board);
@@ -325,8 +327,27 @@ console.log(board);
 // 25. Start by using the following variables:
 var slaying = true;
 var youHit = Math.floor(Math.random() * 2);
-var damageThisRound = Math.floor(Math.random()*5 + 1);
+var damageThisRound = Math.floor(Math.random() * 5 + 1);
 var totalDamage = 0;
+
+while (slaying) {
+	if (youHit === 1) {
+		youHit = Math.floor(Math.random() * 2);
+		console.log('Great! You hit the dog');
+		totalDamage = totalDamage + damageThisRound;
+		if (totalDamage >= 4) {  
+			console.log('You killed the Dog!');
+			slaying = true; 
+		} else if (totalDamage < 4) {
+			youHit = Math.floor(Math.random() * 2);
+		}
+	} else if (youHit === 0) {
+		youHit = Math.floor(Math.random() * 2);
+		console.log('Ugh, the dog is kicking your butt!');
+		slaying = false;
+	}
+}
+
 
 // 26. Create a while loop that runs as long as "slaying" is equal to true. For now, set "slaying" to false
 //     inside of the body of the loop so we don't break stuff with an infinite loop.
@@ -341,20 +362,17 @@ var totalDamage = 0;
 //     This will begin the loop again.
 // 30. Play until you win!
 
-while (slaying) {
-	slaying = false;
-	if (youHit === 1) {
-		youHit = Math.floor(Math.random() * 2);
-		console.log('Great! You hit the dog');
-		totalDamage = totalDamage + damageThisRound;
-		if (totalDamage === 4) {  
-			console.log('You killed the Dog!');
-			slaying = true; 
-		} else if (totalDamage < 4) {
-			youHit = Math.floor(Math.random() * 2);
-		}
-	} else if (youHit === 0) {
-		youHit = Math.floor(Math.random() * 2);
-		console.log('Ugh, the dog is kicking your butt!');
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
